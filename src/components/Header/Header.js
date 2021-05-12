@@ -1,11 +1,11 @@
 import React from 'react';
 import './Header.css';
-import img from './images/amazon_logo.png';
+import img from '../../images/amazon_logo.png';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import {Link} from 'react-router-dom';
-import { useStateValue } from './StateProvider';
-import { auth } from './firebase';
+import { useStateValue } from '../../StateProvider';
+import { auth } from '../../firebase';
 
 function Header() {
     const [{cart, user}, dispatch] = useStateValue();

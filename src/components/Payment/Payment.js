@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import CheckoutProduct from './CheckoutProduct';
+import CheckoutProduct from '../CheckoutProduct/CheckoutProduct';
 import './Payment.css';
-import { useStateValue } from './StateProvider';
+import { useStateValue } from '../../StateProvider';
 import { Link, useHistory } from 'react-router-dom';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
-import { getCartTotal } from './reducer';
+import { getCartTotal } from '../../reducer';
 import CurrencyFormat from 'react-currency-format';
 import axios from 'axios';
 
@@ -35,7 +35,7 @@ function Payment() {
         getClientSecret();
     }, [cart])
 
-    console.log('THE SECRET IS >>>', clientSecret)
+    console.log(clientSecret)
 
     const handleSubmit = async (event)=>{
         event.preventDefault();

@@ -1,9 +1,8 @@
 import React from 'react';
-import headerImage from './images/header-logo.jpg';
+import headerImage from '../../images/header-logo.jpg';
 import './Home.css';
-import Product from './Product';
-import product1 from './images/dishwasher.jpg';
-import product2 from './images/tv.jpg';
+import Product from '../Product/Product';
+import product2 from '../../images/tv.jpg';
 
 function Home() {
     return (

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Login.css';
-import logo from './images/amazon-black.png';
+import logo from '../../images/amazon-black.png';
 import {Link, useHistory} from 'react-router-dom';
-import {auth} from './firebase';
+import {auth} from '../../firebase';
 
 function Login() {
 

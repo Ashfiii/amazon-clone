@@ -1,19 +1,18 @@
 import React from 'react';
 import './Checkout.css';
-import image from './images/amazon-ad.jpg';
-import Subtotal from './Subtotal';
-import CheckoutProduct from './CheckoutProduct';
-import { useStateValue } from './StateProvider';
+import Subtotal from '../Subtotal/Subtotal';
+import CheckoutProduct from '../CheckoutProduct/CheckoutProduct';
+import { useStateValue } from '../../StateProvider';
 
 function Checkout() {
-    const [{cart}, dispatch] = useStateValue()
+    const [{cart}] = useStateValue()
     return (
         <div className="checkout">
             <div className="checkout__left">
                 {/* <img className="checkout__ad" src={image} alt="" /> */}
                 <div>
                     <h2 className="checkout__title">Shopping Cart</h2>
-                    {cart.length==0 ? <h2 className="checkout__header">No Items in the Cart</h2>: 
+                    {cart.length===0 ? <h2 className="checkout__header">No Items in the Cart</h2>: 
                     cart.map(item =>(
                         <CheckoutProduct 
                         id={item.id}
